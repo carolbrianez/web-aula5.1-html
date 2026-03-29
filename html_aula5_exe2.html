@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Details</title>
+  <style>
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    :root {
+      --accent: #e8eaa9;
+      --accent-dark: #929590;
+      --muted: #6b7280;
+      --bg: #f5f5f7;
+      --card: #ffffff;
+      --brand-dark: #323131;
+    }
+
+    body {
+      background: var(--bg);
+      color: #333;
+    }
+
+    .topbar {
+      background: var(--brand-dark);
+      color: white;
+      text-align: center;
+      padding: 8px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 40px;
+      background: var(--brand-dark);
+      color: white;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .logo-img {
+      width: 25px;
+      height: auto;
+      display: block;
+    }
+
+    .navbar ul {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .navbar li {
+      cursor: pointer;
+    }
+
+    .navbar .active {
+      font-weight: bold;
+    }
+
+    .hero {
+      background: gray;
+      color: white;
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    .product-container {
+      display: flex;
+      gap: 40px;
+      padding: 40px;
+      background: white;
+      max-width: 1000px;
+      margin: 40px auto;
+      align-items: center;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .product-image img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      display: block;
+      height: auto;
+    }
+
+    .product-info {
+      max-width: 400px;
+    }
+
+    .product-info .tag {
+      color: var(--muted);
+    }
+
+    .price {
+      margin: 10px 0;
+    }
+
+    .current {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--accent);
+    }
+
+    .old {
+      text-decoration: line-through;
+      margin-left: 10px;
+      color: var(--muted);
+    }
+
+    .stock {
+      color: var(--accent-dark);
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 15px 0;
+    }
+
+    .quantity button {
+      width: 30px;
+      height: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .rating {
+      display: inline-block;
+      background: rgba(232,234,169,0.12);
+      color: var(--accent-dark);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .buy {
+      background: var(--accent);
+      border: none;
+      padding: 10px 20px;
+      color: #111;
+      cursor: pointer;
+      border-radius: 8px;
+      font-weight: 700;
+      box-shadow: 0 8px 20px rgba(232,234,169,0.14);
+    }
+
+    .buy:hover { transform: translateY(-2px); }
+
+    .cart {
+      background: transparent;
+      border: 2px solid var(--accent-dark);
+      padding: 8px 18px;
+      color: var(--accent-dark);
+      cursor: pointer;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    .description {
+      padding: 40px;
+      background: #fff;
+      margin-top: 20px;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .tabs button {
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      background: none;
+      cursor: pointer;
+    }
+
+    .tabs .active {
+      border-color: lightgray;
+      color: lightslategray;
+    }
+
+    .about-list {
+      margin-top: 20px;
+    }
+
+    .about-list li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="promo">Sign up get 20% Off for all collection</div>
+    <nav class="navbar">
+      <h1 class="logo"><img src="on-logo.png" alt="On logo" class="logo-img"> Running</h1>
+      <ul>
+        <li>Home</li>
+        <li class="active">Products</li>
+        <li>Categories</li>
+        <li>About us</li>
+        <li>Contact Us</li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Products / Sneakers / Product Details</h2>
+  </section>
+
+  <section class="product-container">
+
+    <div class="product-image">
+      <img src="tenis1.avif" alt="sneaker">
+    </div>
+
+    <div class="product-info">
+      <p class="tag">Cloudmonster 3</p>
+      <h3>We've levelled up the latest Cloudmonster, bringing back the forward-rolling ride you love. Now featuring a triple-layer CloudTec® cushioning system for more responsiveness.</h3>
+
+      <div class="price">
+        <span class="current">$190.00</span>
+        <span class="old">$200.00</span>
+      </div>
+
+      <p class="stock">In Stock</p>
+
+      <div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
+
+      <div class="quantity">
+        <button>-</button>
+        <span>1</span>
+        <button>+</button>
+      </div>
+
+      <div class="buttons">
+        <button class="buy">Buy Now</button>
+        <button class="cart">Add to Cart</button>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="description">
+    <div class="tabs">
+      <button class="active">Description</button>
+      <button>Additional Info</button>
+      <button>Review</button>
+    </div>
+
+    <p>
+      <strong>Our mission at On is to ignite the human spirit through movement. Inspired by athletes. Powered by Swiss engineering. Move with us, and Dream On.</strong><br>
+    </p>
+
+    <br><br><h3>About this item</h3>
+
+    <ul class="about-list">
+      <li>Weight: 295.0g</li>
+      <li>CloudTec® cushioning system engineered for responsive runs</li>
+      <li>Helion™ foam for comfort and energy return</li>
+      <li>Speedboard® for propulsion</li>
+      <li>Knit upper engineered for breathability</li>
+      <li>Enhanced rocker shape for energetic push-offs</li>
+      <li>Compressed rubber outsole for optimized traction</li>
+    </ul>
+
+  </section>
+
+</body>
+</html>
